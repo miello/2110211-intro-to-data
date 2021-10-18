@@ -28,7 +28,7 @@ void CP::priority_queue<T,Comp>::fixDown(size_t idx) {
             }
         }
 
-        if(mData[nowIdx] < now) break;
+        if(mLess(mData[nowIdx], now)) break;
 
         mData[idx] = mData[nowIdx];
         idx = nowIdx;
